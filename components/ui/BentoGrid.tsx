@@ -82,12 +82,10 @@ export const BentoGridItem = ({
 
   return (
     <div
-      className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
-        id === 6 && "overflow-visible",
-        className
-      )}
+    className={cn(
+      "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+      className
+    )}
       style={{
         //   add these two
         //   you can generate the color from here https://cssgradient.io/
@@ -122,11 +120,12 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
-        )}
+  <div className="absolute inset-0 overflow-hidden rounded-[inherit]">
+    <BackgroundGradientAnimation>
+      <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl" />
+    </BackgroundGradientAnimation>
+  </div>
+)}
 
         <div
           className={cn(

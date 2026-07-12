@@ -134,6 +134,22 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "https://made-work.com/",
   },
+  {
+    id: 9,
+    title: "Fannet — Sales Analytics Dashboard",
+    des: "Developed a scalable CMS dashboard for tracking sales performance, leads, KPIs, and onboarding metrics through interactive charts and dynamic reporting. Implemented role-based access control, responsive dashboards, and modular analytics pages to improve reporting efficiency and team collaboration.",
+    img: "/projects/fannet.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/re.svg", "/c.svg"],
+    link: "https://fannet.vercel.app/leads",
+  },
+  {
+    id: 10,
+    title: "Agile Falcon — Event Management Platform",
+    des: "Contributed to the development of a full-stack event management platform connecting delegates and sponsors through meeting scheduling, event agendas, and profile management.",
+    img: "/projects/agile-falcon.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg", "/c.svg"],
+    link: "https://agilefalconsg.com",
+  },
 ];
 
 export const testimonials = [
