@@ -8,10 +8,8 @@ import { cn } from "@/lib/utils";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
 import dynamic from "next/dynamic";
+import Lottie from "lottie-react";
 
-const Lottie = dynamic(() => import("react-lottie").then((mod) => mod.default), {
-  ssr: false,
-});
 
 const GridGlobe = dynamic(() => import("./GridGlobe"), {
   ssr: false,
@@ -74,10 +72,18 @@ export const BentoGridItem = ({
   const [playKey, setPlayKey] = useState(0);
 
   const handleCopy = async () => {
-    const text = "qasimali357i@gmail.com";
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setPlayKey((key) => key + 1);
+    try {
+      await navigator.clipboard.writeText("qasimali357i@gmail.com");
+  
+      setCopied(true);
+      setPlayKey((key) => key + 1);
+  
+      setTimeout(() => {
+        setCopied(false);
+      }, 2500);
+    } catch (error) {
+      console.error("Failed to copy email:", error);
+    }
   };
 
   return (
@@ -181,35 +187,28 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <div className="mt-5 relative z-20">
-              {copied && (
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[60]">
-                  <Lottie
-                    key={playKey}
-                    options={{
-                      loop: false,
-                      autoplay: true,
-                      animationData,
-                      rendererSettings: {
-                        preserveAspectRatio: "xMidYMid slice",
-                      },
-                    }}
-                    height={220}
-                    width={420}
-                    isClickToPauseDisabled
-                  />
-                </div>
-              )}
+  <div className="mt-5 relative z-20">
+    {copied && (
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[60]">
+        <Lottie
+          key={playKey}
+          animationData={animationData}
+          loop={false}
+          autoplay
+          className="w-[420px] h-[220px]"
+        />
+      </div>
+    )}
 
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
-            </div>
-          )}
+    <MagicButton
+      title={copied ? "Email is Copied!" : "Copy my email address"}
+      icon={<IoCopyOutline />}
+      position="left"
+      handleClick={handleCopy}
+      otherClasses="!bg-[#161A31]"
+    />
+  </div>
+)}
         </div>
       </div>
     </div>
