@@ -72,8 +72,8 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: " UberEats (Food Delivery Service)",
-    des: "Created Uber Eats, a dedicated food delivery service by partnering your favoriterestaurant specializing in providing a seamless experience for customers craving fast and reliable access to their favorite meals.",
+    title: "UberEats (Food Delivery Service)",
+    des: "Created Uber Eats, a dedicated food delivery service by partnering your favorite restaurant specializing in providing a seamless experience for customers craving fast and reliable access to their favorite meals.",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://www.ubereats.com/",
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 3,
     title: "AMZGeeks (Automation and Brand Management)",
-    des: "Developed AMZGeeks,apremier platform aimed at revolutionizing the e-commerce landscape by offering tailored solutions for online sellers.",
+    des: "Developed AMZGeeks, a premier platform aimed at revolutionizing the e-commerce landscape by offering tailored solutions for online sellers.",
     img: "/p3.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://amzgeeks.com/",
@@ -101,6 +101,38 @@ export const projects = [
     img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://dogtor-webapp.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Syssel – Dual-role Marketplace for Services & Job Bidding",
+    des: "Worked on a service-based platform where users could post jobs or offer services, contributing to both front-end and back-end alongside the team. Handled booking flows, user dashboards, real-time chat, map-based location handling, vouchers/gifting, and service discounts.",
+    img: "/projects/syssel.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://www.sysselmarket.com/",
+  },
+  {
+    id: 6,
+    title: "JavaTimesCaffe (Fundraiser)",
+    des: "Developed the Java Time Caffe app frontend. It allows users to invest in coffee franchises and purchase digital shares.",
+    img: "/projects/javatimescaffe.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://investin.javatimescaffe.com/",
+  },
+  {
+    id: 7,
+    title: "Kicks.co (Sneaker Reselling E-commerce Platform)",
+    des: "Developed a high-performance e-commerce platform focused on sneaker reselling. Implemented product listing, search, and order management modules using React, Express, and MongoDB.",
+    img: "/projects/kicks.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://kicks.co/",
+  },
+  {
+    id: 8,
+    title: "Made Work (Business Management Web App)",
+    des: "Built a full-featured business management web app using React and Node.js. Designed clean, responsive UIs with Tailwind CSS and handled API integration for seamless data flow. Deployed on AWS (EC2 & S3) for scalability and uptime reliability.",
+    img: "/projects/madework.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "https://made-work.com/",
   },
 ];
 
